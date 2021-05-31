@@ -3,6 +3,7 @@ description: 'Back up your wakatime sync to your gist'
 branding:
   icon: 'clipboard'
   color: 'blue'
+runs-on: self-hosted
 runs:
   using: 'node12'
   main: 'dist/index.js'
