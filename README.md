@@ -5,6 +5,8 @@
 
 ---
 
+> If you only need notify wakatime daily report, you can check out [wakatime-notify](https://github.com/superman66/wakatime-notify)
+
 ## Setup
 
 ### Prep work
@@ -25,14 +27,14 @@
 4. Run workflow manually. Because workflows aren’t being run on forked repository.
 
 
-### Push Daily Report to MicroMessage
+### Push Daily Report to Wechat
 
-if you are using MicroMessage, you can use **ServerChan(http://sc.ftqq.com/)** to push wakatime daily report to your micromessage.
+if you are using Wechat, you can use **ServerChan(http://sc.ftqq.com/)** to push wakatime daily report to your Wechat.
 
 #### Settting
 
-1. Create a ServerChan account (http://sc.ftqq.com/)
-2. In sending message Page, copy SCKEY (http://sc.ftqq.com/?c=code)
+1. Create a ServerChan account (https://sct.ftqq.com/)
+2. Copy SCKEY (https://sct.ftqq.com/sendkey)
 3. Bind your micromessage in ServerChan
 4. Add SCKEY to repo **Secrets**: **SCU_KEY**
 
@@ -41,6 +43,11 @@ after that, you will receive Wakatime daily report everyday.
 <p align="center">
   <img width="400" src="./screenshot/daily-report.jpg">
 </p>
+
+## Warning
+In addition to a specific file's contents being truncated, the entire files list may be truncated if the total number exceeds 300 files. If the top level truncated key is true, only the first 300 files have been returned in the files list. If you need to fetch all of the gist's files, you'll need to clone the gist via the URL provided by git_pull_url.
+
+[Gist Truncation](https://docs.github.com/en/rest/gists/gists?apiVersion=2022-11-28#truncation)
 
 ## More Usage
 
